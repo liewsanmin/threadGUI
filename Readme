@@ -1,0 +1,21 @@
+Description:
+    - The program is structured as follows:
+        main -> panel -> myThread where '->' is the parent to child class relationship 
+    - only one timer is used
+    - each thread has its own of counter variable and track when its start or stop button is pressed
+
+Instructions:
+    - To run this program, you would have to edit fwpy.sh accordingly so that the shell script
+      can locate the python sripts accurately.
+    - For example, locate your local python framework folder and save it in the 'SYSTEM_FRAMEWORK_PYTHON_ROOT' variable
+    - create the virtual env folder using the tutorial below:
+        https://wiki.wxpython.org/wxPythonVirtualenvOnMac to create the 'test1' folder
+    - The GUI is run in a virtual environment by running the commad:
+        . ./test1/bin/activate 
+        at the parent directory of the folder
+    - then run the following to activate the GUI:
+        sh fwpy.sh main.py 
+
+    NOTE: make sure to place the python files in the test1/lib/python2.7/site-packages folder
+
+
