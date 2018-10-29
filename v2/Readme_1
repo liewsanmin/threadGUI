@@ -1,0 +1,27 @@
+Description:
+    - The program is structured as follows:
+        main_1 -> panel_1 -> myThread_1
+                      -> myEvent_1
+        where '->' is the parent to child class relationship 
+    - each thread now has its own frequency of its choice where it sleeps for self.freq period
+    - each thread has its own of counter variable and track when its start or stop button is pressed
+    - when on button pressed, it checks if the corresponding thread exists, then creates one
+        - the thread post the event and displays the incremented counter continously at each iteration of the loop
+    - when off button pressed, it post the event hence printing 'thread x stopped'. Then sets the thread x back to None
+    myThread_1 class continously updates the continue at each period based on self.frequency
+
+Instructions:
+    - To run this program, you would have to edit fwpy.sh accordingly so that the shell script
+      can locate the python sripts accurately.
+    - For example, locate your local python framework folder and save it in the 'SYSTEM_FRAMEWORK_PYTHON_ROOT' variable
+    - create the virtual env folder using the tutorial below:
+        https://wiki.wxpython.org/wxPythonVirtualenvOnMac to create the 'test1' folder
+    - The GUI is run in a virtual environment by running the commad:
+        . ./test1/bin/activate 
+        at the parent directory of the folder
+    - then run the following to activate the GUI:
+        sh fwpy.sh main_1.py 
+
+    NOTE: make sure to place the python files in the test1/lib/python2.7/site-packages folder
+
+
